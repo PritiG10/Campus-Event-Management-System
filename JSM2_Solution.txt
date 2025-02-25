@@ -1,0 +1,25 @@
+#include <assert.h>
+#include <stdio.h>
+#include <string.h>
+
+int findSubstring(const char *str, const char *substr) {
+    char *pos = strstr(str, substr);
+    if (pos) {
+        return pos - str;
+    }
+    return -1; // If substring not found
+}
+
+void testFindSubstring() {
+    assert(findSubstring("hello world", "world") == 6);
+    assert(findSubstring("C programming", "prog") == 2);
+    assert(findSubstring("abcdabcd", "bca") == -1);
+    assert(findSubstring("12345", "45") == 3);
+    assert(findSubstring("mississippi", "iss") == 1);
+}
+
+int main() {
+    testFindSubstring();
+    printf("All substring finding tests passed.\n");
+    return 0;
+}

@@ -1,0 +1,7 @@
+int findSubstring(const char *str, const char *substr) 
+{
+    // Find the first occurrence of substring and return it
+    
+    // If substring not found
+    return -1; 
+}
